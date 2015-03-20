@@ -17,8 +17,9 @@ There is no more necessary for ugly iframes and similar alternatives, in just on
 This plugin will help you to promote your social network posts, and make your facebook page more active.
 
 Demos:
-http://demo.wp-resources.com/facebook-stream-demo
-http://demo.wp-resources.com/facebook-stream-demo-white/
+
+* http://demo.wp-resources.com/facebook-stream-demo
+* http://demo.wp-resources.com/facebook-stream-demo-white/
 
 Features:
 
