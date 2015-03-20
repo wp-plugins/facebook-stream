@@ -16,17 +16,24 @@ Plugin is created to show facebook feed in pinterest style (responsive boxes). Y
 There is no more necessary for ugly iframes and similar alternatives, in just only few clicks you will configure plugin and generate shortcode that you can use on any page or post you want. 
 This plugin will help you to promote your social network posts, and make your facebook page more active.
 
-Demos: 
+Demos:
 http://demo.wp-resources.com/facebook-stream-demo
 http://demo.wp-resources.com/facebook-stream-demo-white/
 
 Features:
+
 * Choose facebook group or page directly from configuration, or define it in shortcode
+
 * Choose how many posts you want to show
+
 * Define number of columns
+
 * Show/Hide posts without any media file (video or image)
+
 * Support for different visual themes (for now we have black and white)
+
 * Define margin and padding directly from shortcode
+
 * Effective caching, and very fast page load
 
 
