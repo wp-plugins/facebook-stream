@@ -25,17 +25,11 @@ http://demo.wp-resources.com/facebook-stream-demo-white/
 Features:
 
 * Choose facebook group or page directly from configuration, or define it in shortcode
-
 * Choose how many posts you want to show
-
 * Define number of columns
-
 * Show/Hide posts without any media file (video or image)
-
 * Support for different visual themes (for now we have black and white)
-
 * Define margin and padding directly from shortcode
-
 * Effective caching, and very fast page load
 
 
@@ -51,6 +45,11 @@ Features:
 Nothing for now
 
 == Screenshots ==
+
+1. Plugin configuration
+2. Generating shortcode
+3. Black template
+4. White template
 
 == Changelog ==
 
