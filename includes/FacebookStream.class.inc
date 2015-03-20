@@ -138,7 +138,7 @@ Class FacebookStream{
             }
         }
         // generate first url
-        $page_url = "https://graph.facebook.com/$this->pageID/feed?limit=$limit&$token&fields=$fields";
+        $page_url = "https://graph.facebook.com/v2.2/$this->pageID/feed?limit=$limit&$token&fields=$fields";
 
         // set page counter
         $i = 0;
