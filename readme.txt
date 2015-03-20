@@ -18,8 +18,8 @@ This plugin will help you to promote your social network posts, and make your fa
 
 Demos:
 
-* http://demo.wp-resources.com/facebook-stream-demo
-* http://demo.wp-resources.com/facebook-stream-demo-white/
+* [Black theme demo](http://demo.wp-resources.com/facebook-stream-demo)
+* [White theme demo](http://demo.wp-resources.com/facebook-stream-demo-white/)
 
 Features:
 
