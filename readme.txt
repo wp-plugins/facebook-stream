@@ -7,7 +7,7 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Facebook stream will show your facebook page or group wall in fully responsive format on your website. Plugin is created to show facebook feed in pinterest style (responsive boxes).
+Facebook stream will show your facebook page or group wall in fully responsive format on your website. 
 
 == Description ==
 
@@ -17,7 +17,9 @@ There is no more necessary for ugly iframes and similar alternatives, in just on
 This plugin will help you to promote your social network posts, and make your facebook page more active.
 
 Demos:
+
 http://demo.wp-resources.com/facebook-stream-demo
+
 http://demo.wp-resources.com/facebook-stream-demo-white/
 
 Features:
@@ -46,8 +48,9 @@ Features:
 
 == Frequently asked questions ==
 
-== Screenshots ==
+Nothing for now
 
+== Screenshots ==
 
 == Changelog ==
 
