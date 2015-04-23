@@ -27,6 +27,7 @@
                         </table>
                     </form>
                 </td>
+                <td><a href="http://wp-resources.com/facebook-stream-pro/" target="_blank"><img src="<?php echo plugin_dir_url( __FILE__ );?>banner.png"></a></td>
            </tr>
         </table>
     </div>

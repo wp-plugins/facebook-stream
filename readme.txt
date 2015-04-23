@@ -2,8 +2,8 @@
 Contributors: ivan.m89
 Tags: facebook stream, custom facebook wall, custom facebook stream, custom facebook feed, facebook feed, fb stream, fb feed, custom feed, embed, events, facebook albums, facebook events, Facebook feed, facebook group, facebook group events, facebook groups, Facebook Page, facebook page events, facebook pages, Facebook photos, facebook plugin, facebook posts, facebook wall
 Requires at least: 3.0
-Tested up to: 4.1
-Stable tag: 1.0.1
+Tested up to: 4.2
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,14 @@ Features:
 * Define margin and padding directly from shortcode
 * Effective caching, and very fast page load
 
+PRO FEATURES
+* Show posts from your facebook groups and pages
+* Show posts from your facebook profile
+* Create custom feed, it is possible to combine posts from groups, pages and profile
+* Better caching system, and faster page load
+* Comments for each post
+* Much faster and efficient support
+
 
 == Installation ==
 
@@ -51,6 +59,12 @@ Nothing for now
 4. White template
 
 == Changelog ==
+
+= 1.1 2015-04-23 =
+* Caching system fixed
+* Switch to latest version of facebook API - 2.3
+* Code clean up
+* Readme updated
 
 = 1.0 2013-03-16 =
 * Initial release

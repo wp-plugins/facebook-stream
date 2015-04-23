@@ -3,7 +3,7 @@
 Plugin Name: Facebook stream
 Plugin URI: http://wp-resources.com/
 Description: Facebook stream will show your facebook page or group wall in fully responsive format on your website. Plugin is created to show facebook feed in pinterest style (responsive boxes)
-Version: 1.0.1
+Version: 1.1
 Author: Ivan M
 */
 

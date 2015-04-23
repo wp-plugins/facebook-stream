@@ -1,5 +1,5 @@
 <div class="wrap">
-    <h1>Setup Plugin in 3 easy steps:</h1>
+    <h1>Setup Plugin in 2 easy steps:</h1>
 
     <div class="infodiv_fbstream">
         <h2>1. Create Facebook Application</h2>
