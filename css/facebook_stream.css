@@ -1,0 +1,218 @@
+.facebook-stream-container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    font: 12px/18px Arial, sans-serif;
+    color: #333;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%
+}
+
+.facebook-stream-container-img {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    height: auto;
+}
+/* White theme */
+.facebook-stream-white-panel a {
+    color: #3384B0 !important;
+    text-decoration: none !important;
+    border: 0px !important;
+}
+
+.facebook-stream-white-panel {
+    position: absolute;
+    background: white;
+    border: 1px solid #FAFAFA;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    padding: 5px;
+    margin: 5px;
+    display: block;
+    opacity: 1;
+}
+.facebook-stream-white-panel:hover {
+    border: 1px solid #FAFAFA;
+    box-shadow: 1px 1px 10px rgba(34, 25, 25, 0.4);
+    margin-top: -2px;
+}
+.facebook-stream-white-panel h1 {
+    font-size: 14px !important;
+    text-decoration: none !important;
+}
+.facebook-stream-white-panel h1 a {
+    color: #3384B0 !important;
+    text-decoration: none !important;
+}
+.facebook-stream-white-panel h1 a:hover {
+    color: #B03333 !important;
+    text-decoration: none !important;
+}
+
+#facebook-stream-white-panel:not(:hover) {
+    opacity: 0.4 !important;
+}
+
+/* Dark theme */
+.facebook-stream-dark-panel a {
+    color: #3384B0 !important;
+    text-decoration: none !important;
+    border: 0px !important;
+}
+.facebook-stream-container-img-dark {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #DBDBDB;
+    height: auto;
+}
+.facebook-stream-dark-panel {
+    position: absolute;
+    background: #212121;
+    color: #F0F0F0 !important;
+    border: 1px solid #000;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);;
+    padding: 5px;
+    margin: 5px;
+    display: block;
+    opacity: 1;
+}
+.facebook-stream-dark-panel:hover {
+    border: 1px solid #000;
+    box-shadow: 1px 1px 10px rgba(34, 25, 25, 0.4);;
+    margin-top: -2px;
+}
+.facebook-stream-dark-panel h1 {
+    font-size: 14px !important;
+    text-decoration: none !important;
+}
+.facebook-stream-dark-panel h1 a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.facebook-stream-dark-panel h1 a:hover {
+    color: #E6E6E6 !important;
+    text-decoration: none !important;
+}
+
+#facebook-stream-dark-panel:not(:hover) {
+    opacity: 0.4 !important;
+}
+/* end dark */
+
+
+.facebook-stream-small-icon{
+    display: inline !important;  
+}
+.facebook-stream-footer{
+    font-size: 90% !important;
+}
+
+
+/* LIGHTBOX FOR IMAGE */
+
+a.facebook-stream-lightbox img {
+
+}
+
+.facebook-stream-lightbox-target {
+        position: fixed;
+        top: -100%;
+        width: 100%;
+        background: rgba(0,0,0,.7);
+        width: 100%;
+        opacity: 0;
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+        overflow: hidden;
+}
+
+.facebook-stream-lightbox-target img {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left:0;
+        right:0;
+        bottom: 0;
+        max-height: 0%;
+        max-width: 0%;
+        border: 3px solid white;
+        box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+        box-sizing: border-box;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+}
+
+.facebook-stream-lightbox-target video {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left:0;
+        right:0;
+        bottom: 5px;
+}
+
+a.facebook-stream-lightbox-close {
+        display: block;
+        width:50px;
+        height:50px;
+        box-sizing: border-box;
+        background: white;
+        color: black;
+        text-decoration: none;
+        position: absolute;
+        top: -80px;
+        right: 0;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+}
+
+a.facebook-stream-lightbox-close:before {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 1px;
+        background: black;
+        position: absolute;
+        left: 26px;
+        top:10px;
+        -webkit-transform:rotate(45deg);
+}
+
+a.facebook-stream-lightbox-close:after {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 1px;
+        background: black;
+        position: absolute;
+        left: 26px;
+        top:10px;
+        -webkit-transform:rotate(-45deg);
+}
+
+.facebook-stream-lightbox-target:target {
+        opacity: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+}
+
+.facebook-stream-lightbox-target:target img {
+        max-height: 100%;
+        max-width: 100%;
+}
+
+.facebook-stream-lightbox-target:target a.facebook-stream-lightbox-close {
+        top: 0px;
+}
+
