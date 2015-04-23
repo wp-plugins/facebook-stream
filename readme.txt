@@ -31,7 +31,8 @@ Features:
 * Define margin and padding directly from shortcode
 * Effective caching, and very fast page load
 
-PRO FEATURES
+PRO FEATURES:
+
 * Show posts from your facebook groups and pages
 * Show posts from your facebook profile
 * Create custom feed, it is possible to combine posts from groups, pages and profile
