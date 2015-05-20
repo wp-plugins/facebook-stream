@@ -144,3 +144,22 @@
 
 })(jQuery, window, document);
 
+ShowDetailsStreamFree = function(fbid){
+    jQuery(".overlay_fsl").hide();
+    
+    var data = {
+        action: 'facebook_stream_comments',
+        fbid: fbid 
+    };
+    jQuery.post(ajaxurl, data, function(response) {
+        jQuery("#comments_fbid_"+fbid).html(response);
+    }).done(function(response) {
+        jQuery("#image_"+fbid).show();
+    });
+    
+
+    
+};
+CloseDetailsStreamFree = function(fbid){
+    jQuery("#image_"+fbid).hide();
+};

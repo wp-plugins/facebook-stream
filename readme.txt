@@ -3,7 +3,7 @@ Contributors: ivan.m89
 Tags: facebook stream, custom facebook wall, custom facebook stream, custom facebook feed, facebook feed, fb stream, fb feed, custom feed, embed, events, facebook albums, facebook events, Facebook feed, facebook group, facebook group events, facebook groups, Facebook Page, facebook page events, facebook pages, Facebook photos, facebook plugin, facebook posts, facebook wall
 Requires at least: 3.0
 Tested up to: 4.2
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,10 @@ Nothing for now
 4. White template
 
 == Changelog ==
+
+= 1.2 2015-05-20 =
+* Image popup improved, now it use javascript for open and close
+* Readme updated
 
 = 1.1 2015-04-23 =
 * Caching system fixed

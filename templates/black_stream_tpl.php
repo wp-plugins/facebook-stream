@@ -5,20 +5,24 @@
         <?php if(!$OnePost['picture'] && !$OnePost['video'] && strlen($OnePost['message']) < 50 && $hide_no_media==="1") {continue;} // hide items without media (picture or video)?>
         <div class="facebook-stream-dark-panel">
             <?php if($OnePost['picture']):?>
-            <a class="facebook-stream-lightbox" href="#image_<?php echo $OnePost['id'];?>">
+            <a class="facebook-stream-lightbox" href="javascript:ShowDetailsStreamFree('<?php echo $OnePost['id'];?>');">
                 <img class="facebook-stream-container-img-dark" src="<?php echo $OnePost['picture'];?>"/>
             </a>
-            <div class="facebook-stream-lightbox-target" id="image_<?php echo $OnePost['id'];?>">
-                <?php if($OnePost['source'] && $OnePost['type']==="video"):?>
-                <video width="400" controls>
-                    <source src="<?php echo $OnePost['source'];?>" type="video/mp4">
-                    Your browser does not support HTML5 video.
-                </video>
-                <?php else:?>
-                <img src="<?php echo $OnePost['picture'];?>"/>
-                <?php endif;?>
-                <a class="facebook-stream-lightbox-close" href="#"></a>
+            
+            <div class='overlay_fsl' id="image_<?php echo $OnePost['id'];?>">
+                <div class="overlay_content_fsl">
+                    <?php if($OnePost['source'] && $OnePost['type']==="video"):?>
+                    <video width="400" controls>
+                        <source src="<?php echo $OnePost['source'];?>" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <?php else:?>
+                    <img src="<?php echo $OnePost['picture'];?>"/>
+                    <?php endif;?>
+                </div>
+                <a class="overlay_close_fsl" href="javascript:CloseDetailsStreamFree('<?php echo $OnePost['id'];?>');">X</a>
             </div>
+            
             <?php endif;?>
             <?php if($OnePost['name']):?><h1><a href="https://facebook.com/<?php echo $OnePost['id'];?>" target="_blank"><?php echo $OnePost['name'];?></a></h1><?php endif;?>
             <?php if($OnePost['message']):?><p><?php echo $SocialStream->trimText($OnePost['message'],250);?></p><?php endif;?>
