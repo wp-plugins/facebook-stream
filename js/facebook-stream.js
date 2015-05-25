@@ -163,3 +163,18 @@ ShowDetailsStreamFree = function(fbid){
 CloseDetailsStreamFree = function(fbid){
     jQuery("#image_"+fbid).hide();
 };
+
+jQuery(document).ready(function() {
+    
+    // close popupu on esc 
+    jQuery(document).on('mousedown keydown', function( e ){
+      if(e.which==27) jQuery(".overlay_fsl").fadeOut();
+    });
+    // or on click outside popup div
+    jQuery(document).click(function (e) {
+        if (jQuery(e.target).parents(".overlay_fsl").length === 0) {
+            jQuery(".overlay_fsl").fadeOut();
+        }
+    });
+    
+});
