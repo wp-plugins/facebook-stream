@@ -60,7 +60,19 @@
                                 <select id="stream_theme" class="regular-text fbstream_fullfield">
                                     <option value="white">White theme</option>
                                     <option value="black">Black theme</option>
+                                    <option value="modern" disabled>Modern white theme - only in PRO</option>
+                                    <option value="modern_black" disabled>Modern black theme - only in PRO</option>
                                 </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Only Owners posts:<br>
+                                <select id="only_owner_posts" class="regular-text fbstream_fullfield">
+                                    <option value="0" selected>No</option>
+                                    <option value="1" disabled>Yes - Only in PRO</option>
+                                </select>
+                                <small>Show only posts created by page owner</small>
                             </td>
                         </tr>
                         <tr>
@@ -108,7 +120,17 @@
                     <small>Copy code below:</small><br><br>
 
                     <textarea id="shortcode_text_area">[facebook-stream limit="25" cols="3" theme="white" padding="10" margin_bottom="50" fb_page_id="<?php echo $fb_page_id;?>" hide_no_media="1"]</textarea>
+                    <br>
+                    <p>
 
+                        <h3>DEMOS:</h3>
+                        * Additional templates and widget support is available only in pro version.<br>
+                        <ul>
+                            <li>- <a href="http://demo.wp-resources.com/facebook-stream-full-width-modern/">Modern white theme demo</a></li>
+                            <li>- <a href="http://demo.wp-resources.com/facebook-stream-full-width-modern-black/">Modern black theme demo</a></li>
+                            <li>- <a href="http://demo.wp-resources.com/">Widget demo</a></li>
+                        </ul>
+                    </p>
                 </td>
            </tr>
         </table>

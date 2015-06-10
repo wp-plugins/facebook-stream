@@ -103,7 +103,7 @@ Class FacebookStream{
                 $mydata['source'] = (isset($element->source)) ? $element->source : null; 
                 $mydata['likes_count'] = (isset($element->likes->summary->total_count)) ? $element->likes->summary->total_count : "0";
                 $mydata['comments_count'] = (isset($element->comments->summary->total_count)) ? $element->comments->summary->total_count : "0";
-                $FBPosts[] = $mydata;
+                $FBPosts[$element->id] = $mydata;
             }
 
             

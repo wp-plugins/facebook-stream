@@ -3,7 +3,7 @@ Contributors: ivan.m89
 Tags: facebook stream, custom facebook wall, custom facebook stream, custom facebook feed, facebook feed, fb stream, fb feed, custom feed, embed, events, facebook albums, facebook events, Facebook feed, facebook group, facebook group events, facebook groups, Facebook Page, facebook page events, facebook pages, Facebook photos, facebook plugin, facebook posts, facebook wall
 Requires at least: 3.0
 Tested up to: 4.2
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,9 @@ Demos:
 
 * [Black theme demo](http://demo.wp-resources.com/facebook-stream-demo)
 * [White theme demo](http://demo.wp-resources.com/facebook-stream-demo-white/)
+* [Modern White theme demo - only PRO](http://demo.wp-resources.com/facebook-stream-full-width-modern/)
+* [Modern Black theme demo - only PRO](http://demo.wp-resources.com/facebook-stream-full-width-modern-black/)
+
 
 Features:
 
@@ -38,6 +41,8 @@ PRO FEATURES:
 * Create custom feed, it is possible to combine posts from groups, pages and profile
 * Better caching system, and faster page load
 * Comments for each post
+* More cool templates
+* Widgets support
 * Much faster and efficient support
 
 
@@ -60,6 +65,10 @@ Nothing for now
 4. White template
 
 == Changelog ==
+
+= 1.4 2015-06-08 =
+* Fixed popup bug
+* Few small template related bugs fixed
 
 = 1.3 2015-05-25 =
 * Close popup on "esc" key, or click outside popup window

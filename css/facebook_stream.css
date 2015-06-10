@@ -41,6 +41,10 @@
 .facebook-stream-white-panel h1 {
     font-size: 14px !important;
     text-decoration: none !important;
+    line-height: 20px !important;
+}
+.facebook-stream-white-panel p {
+    line-height: 20px !important;
 }
 .facebook-stream-white-panel h1 a {
     color: #3384B0 !important;
@@ -87,6 +91,10 @@
 .facebook-stream-dark-panel h1 {
     font-size: 14px !important;
     text-decoration: none !important;
+    line-height: 20px !important;
+}
+.facebook-stream-dark-panel p {
+    line-height: 20px !important;
 }
 .facebook-stream-dark-panel h1 a {
     color: #fff !important;
