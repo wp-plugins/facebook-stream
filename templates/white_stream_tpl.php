@@ -2,26 +2,34 @@
     <?php if($GetAvailablePosts):?>
     <?php foreach($GetAvailablePosts as $OnePost):?>
     
+    
+    <?php
+    // show more link
+    $img_description = "<br><a href='https://facebook.com/".$OnePost['id']."'>Show more</a>";
+    
+    if(isset($OnePost['source'])){
+        $box_class = "video";
+        $box_src = $OnePost['source'];
+    } else {
+        $box_class = "sliboxes";
+        $box_src = $OnePost['picture'];
+    }
+    
+    ?>
+    
+    
         <?php if(!$OnePost['picture'] && !$OnePost['video'] && strlen($OnePost['message']) < 50 && $hide_no_media==="1") {continue;} // hide items without media (picture or video)?>
+        
         <div class="facebook-stream-white-panel">
             <?php if($OnePost['picture']):?>
-            <a class="facebook-stream-lightbox" href="javascript:ShowDetailsStreamFree('<?php echo $OnePost['id'];?>');">
-                <img class="facebook-stream-container-img-dark" src="<?php echo $OnePost['picture'];?>"/>
-            </a>
             
-            <div class='overlay_fsl' id="image_<?php echo $OnePost['id'];?>">
-                <div class="overlay_content_fsl">
-                    <?php if($OnePost['source'] && $OnePost['type']==="video"):?>
-                    <video width="400" controls>
-                        <source src="<?php echo $OnePost['source'];?>" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                    </video>
-                    <?php else:?>
-                    <img src="<?php echo $OnePost['picture'];?>"/>
-                    <?php endif;?>
-                </div>
-                <a class="overlay_close_fsl" href="javascript:CloseDetailsStreamFree('<?php echo $OnePost['id'];?>');">X</a>
-            </div>
+
+            <a class="<?php echo $box_class;?>" href="<?php echo $box_src;?>" title="<?php echo $img_description;?>">
+                <img class="facebook-stream-container-img-dark" src="<?php echo $OnePost['picture'];?>" />
+            </a>
+
+
+
             <?php endif;?>
             <?php if($OnePost['name']):?><h1><a href="https://facebook.com/<?php echo $OnePost['id'];?>" target="_blank"><?php echo $OnePost['name'];?></a></h1><?php endif;?>
             <?php if($OnePost['message']):?><p><?php echo $SocialStream->trimText($OnePost['message'],250);?></p><?php endif;?>
@@ -42,6 +50,9 @@
 </div>
 <script>
     jQuery(document).ready(function() {
+        
+        jQuery(".sliboxes").colorbox({rel:'group1',photo:true});
+        jQuery(".video").colorbox({iframe:true, innerWidth:640, innerHeight:390});
         
         jQuery('#facebook-stream-container-<?php echo $unique_hash;?>').pinterest_grid({
             no_columns: <?php echo $cols; ?>,
