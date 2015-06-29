@@ -103,6 +103,7 @@ Class FacebookStream{
                 $mydata['source'] = (isset($element->source)) ? $element->source : null; 
                 $mydata['likes_count'] = (isset($element->likes->summary->total_count)) ? $element->likes->summary->total_count : "0";
                 $mydata['comments_count'] = (isset($element->comments->summary->total_count)) ? $element->comments->summary->total_count : "0";
+                $mydata['fb_link'] = ($element->type === 'photo' && isset($element->link)) ? $element->link : 'https://facebook.com/'.$element->id;
                 $FBPosts[$element->id] = $mydata;
             }
 
@@ -126,7 +127,7 @@ Class FacebookStream{
      * @param string $fields
      * @return type
      */
-    public function GetListOfFBPosts($limit,$token,$fields = 'id,created_time,full_picture,picture,link,name,caption,icon,type,message,source,likes.limit(1).summary(true),comments.limit(1).summary(true),from,attachments'){
+    public function GetListOfFBPosts($only_owners_posts,$limit,$token,$fields = 'id,created_time,full_picture,picture,link,name,caption,icon,type,message,source,likes.limit(1).summary(true),comments.limit(1).summary(true),from,attachments'){
         
         // set number of pages
         if(!$limit){
@@ -160,6 +161,19 @@ Class FacebookStream{
             $i++;
         } while($FBPage['next_url']);
 
+        // get group ID
+        if($only_owners_posts){
+            $submited_page_data = $this->GetHTTPSData('https://graph.facebook.com/v2.2/'.$this->pageID.'/?'.$token);
+        
+            $submited_page_json = json_decode($submited_page_data);
+            $submited_page_id = $submited_page_json->id;
+            // remove from array if it's not posted by owner
+            foreach($Items as $key=>$oneItem){
+                if($oneItem['from_id'] !== $submited_page_id){
+                    unset($Items[$key]);
+                }
+            }
+        }
         
         return $Items;
     }

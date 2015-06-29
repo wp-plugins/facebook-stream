@@ -69,8 +69,8 @@
                             <td>
                                 Only Owners posts:<br>
                                 <select id="only_owner_posts" class="regular-text fbstream_fullfield">
-                                    <option value="0" selected>No</option>
-                                    <option value="1" disabled>Yes - Only in PRO</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
                                 </select>
                                 <small>Show only posts created by page owner</small>
                             </td>
@@ -119,7 +119,7 @@
                     <h3>Shortcode:</h3>
                     <small>Copy code below:</small><br><br>
 
-                    <textarea id="shortcode_text_area">[facebook-stream limit="25" cols="3" theme="white" padding="10" margin_bottom="50" fb_page_id="<?php echo $fb_page_id;?>" hide_no_media="1"]</textarea>
+                    <textarea id="shortcode_text_area">[facebook-stream limit="25" cols="3" only_owners_posts="1" theme="white" padding="10" margin_bottom="50" fb_page_id="<?php echo $fb_page_id;?>" hide_no_media="1"]</textarea>
                     <br>
                     <p>
 

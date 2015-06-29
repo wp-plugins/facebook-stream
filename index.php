@@ -3,7 +3,7 @@
 Plugin Name: Facebook stream
 Plugin URI: http://wp-resources.com/
 Description: Facebook stream will show your facebook page or group wall in fully responsive format on your website. Plugin is created to show facebook feed in pinterest style (responsive boxes)
-Version: 1.5
+Version: 1.6
 Author: Ivan M
 */
 
@@ -51,9 +51,10 @@ function facebook_stream_shortcode_function( $atts ) {
     $theme = (isset($atts['theme'])) ? $atts['theme'] : "white";
     $unique_hash = md5(time().rand(1,100).rand(100,10000));
     $fb_page_id = (isset($atts['fb_page_id'])) ? $atts['fb_page_id'] : get_option('facebook_stream_fbPageID');
+    $only_owners_posts = (isset($atts['only_owners_posts'])) ? $atts['only_owners_posts'] : "1";
     
     // generate unique cache key
-    $unique_cache_key = md5($limit.$hide_no_media.$cols.$padding.$bottom_margin.$theme.$fb_page_id);
+    $unique_cache_key = md5($limit.$hide_no_media.$cols.$padding.$bottom_margin.$theme.$fb_page_id.$only_owners_posts);
     $cache->setCache('facebook_stream_cache');
     // check is cache expired, and delete it
     $cache->deleteIfExipired($unique_cache_key);
@@ -64,10 +65,10 @@ function facebook_stream_shortcode_function( $atts ) {
     } else {
         $GenerateToken = $SocialStream->GenerateAccessToken();
         $SocialStream->setFBPageID($fb_page_id);
-        $GetAvailablePosts = $SocialStream->GetListOfFBPosts($limit, $GenerateToken);
+        $GetAvailablePosts = $SocialStream->GetListOfFBPosts($only_owners_posts,$limit, $GenerateToken);
         $cache->store($unique_cache_key, $GetAvailablePosts, 360);
     }
-        
+        //var_dump($GetAvailablePosts);
     // show template
     ob_start();
     if($theme === "white"){
